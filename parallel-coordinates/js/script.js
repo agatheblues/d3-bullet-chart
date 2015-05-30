@@ -10,7 +10,7 @@ function randomise(numLines){
     });
 }
 
-var numLines = 4;
+var numLines = 10;
 var dataset = randomise(numLines);
 var numKeys = dataset[0] ? Object.keys(dataset[0]).length : 0; //Si dataset est vide; numkeys = 0
 
@@ -111,7 +111,7 @@ function update(dataset){
                 circles.transition()
                             .duration(2000)
                             .delay(function(d,i){
-                                return i*500;
+                                return 500 + i*600;
                             })
                             .attr('cx',function(d){return d.x;})
                             .attr('cy',function(d){return d.y;});
@@ -132,7 +132,7 @@ function update(dataset){
                     lines.transition()
                             .duration(2000)
                             .delay(function(d,i){
-                                return 500+i*500;
+                                return i*500;
                             })
                             .attr('d',function(d){return lineFunction(d);})
                             .attr('stroke','#777777')
@@ -140,6 +140,12 @@ function update(dataset){
 
                     lines.exit()
                             .remove();
+
+
+    d3.selectAll('.lines').on('mouseover',function(){
+        d3.selectAll('.lines').attr('stroke','#777777');
+        d3.select(this).attr('stroke','#5500FF');
+    });
 
     } else
     {alert("Dataset is empty :(");}
