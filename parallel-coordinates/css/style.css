@@ -40,6 +40,10 @@ svg{
     shape-rendering: crispEdges; /*The shape-rendering property is an SVG attribute, used here to make sure our axis and its tick mark lines are pixel-perfect.*/
 }
 
+.circle {
+    fill : #fff000;
+}
+
 
 #buttons {
     text-align:center;
