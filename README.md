@@ -9,3 +9,6 @@ You have three buttons :
 - Remove a bullet entry
 
 The graph adapts to the number of bullet entries, and to the random datas newly generated. 
+
+## What it looks like 
+![alt tag](https://github.com/agatheblues/d3-bullet-chart/blob/master/bullet.gif)
