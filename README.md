@@ -7,4 +7,5 @@ You have three buttons :
 - Generate new random datas
 - Add a new bullet entry
 - Remove a bullet entry
+
 The graph adapts to the number of bullet entries, and to the random datas newly generated. 
